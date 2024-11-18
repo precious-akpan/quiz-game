@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-// import { fetchQuestions } from './utils/api';
-// import Question from './components/Question';
-// import { QuizQuestion } from './types/quiz.types';
+import { fetchQuestions } from './utils/api';
+import Question from './components/Question';
+import { QuizQuestion } from './types/quiz.types';
 
 const App: React.FC = () => {
-    // const [questions, setQuestions] = useState<QuizQuestion[]>([]);
-    // const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    // const [score, setScore] = useState(0);
+    const [questions, setQuestions] = useState<QuizQuestion[]>([]);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [score, setScore] = useState(0);
 
     useEffect(() => {
         const loadQuestions = async () => {
