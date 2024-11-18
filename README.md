@@ -29,3 +29,6 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/your-repository/quiz-game.git
 cd quiz-game
+npm start
+This will run the app in development mode. Open http://localhost:3000  to view it in the browser.
+How to PlayStart the quiz by clicking the 'Start' button.Choose your answer from the provided options for each question.After selecting an answer, the application will automatically move to the next question.At the end of the quiz, your score will be displayed.Error HandlingThe application handles invalid or missing data gracefully, ensuring that game logic errors do not disrupt the player's experience.Contributing
