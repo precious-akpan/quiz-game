@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Quiz Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Quiz Game is a dynamic web application built with [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/) that allows players to test their knowledge on various topics. The game displays one question at a time, allows the player to select an answer, and provides feedback on the correctness before moving to the next question. At the end of the game, the player can see their total score.
 
-Currently, two official plugins are available:
+## Features
+- Dynamically load questions from an API.
+- Select answers and receive immediate feedback.
+- Track and display the player's score at the end of the game.
+- Responsive design for an engaging user experience on both desktop and mobile devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Optional Features
+- Timer for each question to add a time-based challenge.
+- Leaderboard to track and display high scores.
 
-## Expanding the ESLint configuration
+## Technologies Used
+- **React.js**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **CSS Modules**: For component-scoped CSS.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Project Setup
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Installing
+Clone the repository to your local machine:
+```bash
+git clone https://github.com/your-repository/quiz-game.git
+cd quiz-game
+npm start
+This will run the app in development mode. Open http://localhost:3000  to view it in the browser.
+How to PlayStart the quiz by clicking the 'Start' button.Choose your answer from the provided options for each question.After selecting an answer, the application will automatically move to the next question.At the end of the quiz, your score will be displayed.Error HandlingThe application handles invalid or missing data gracefully, ensuring that game logic errors do not disrupt the player's experience.Contributing
