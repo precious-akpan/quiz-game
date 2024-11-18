@@ -1,7 +1,9 @@
+// src/components/App.tsx
 import React, { useState, useEffect } from 'react';
 import { fetchQuestions } from './utils/api';
 import Question from './components/Question';
 import { QuizQuestion } from './types/quiz.types';
+import styles from './App.module.css'; // Import the CSS module
 
 const App: React.FC = () => {
     const [questions, setQuestions] = useState<QuizQuestion[]>([]);
@@ -32,18 +34,20 @@ const App: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className={styles.container}>
+            <div className={styles.header}>Quiz Game</div>
             {questions.length > 0 ? (
-                <Question
-                    question={questions[currentQuestionIndex]}
-                    onAnswer={handleAnswer}
-                />
+                <div className={styles.questionContainer}>
+                    <Question
+                        question={questions[currentQuestionIndex]}
+                        onAnswer={handleAnswer}
+                    />
+                </div>
             ) : (
-                <p>Loading questions...</p>
+                <p className={styles.loading}>Loading questions...</p>
             )}
         </div>
     );
 };
 
 export default App;
-
