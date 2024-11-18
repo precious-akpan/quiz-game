@@ -16,7 +16,7 @@ const App: React.FC = () => {
             setQuestions(questions);
         };
 
-        loadQuestions();
+        loadQuestions().then(r => console.log(r)).catch(err => alert(err.message));
     }, []);
 
     const handleAnswer = (answer: string) => {
